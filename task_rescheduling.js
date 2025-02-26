@@ -11,17 +11,15 @@ let taskArr = ["T1", "T2", "T3", "T4", "T5"];
 console.log("Task array is: ", taskArr);
 console.log("Removing the first task...");
 
-// remove the first elt
-for(i=0;i<taskArr.length;i++){
-    if(i == taskArr.length-1){
-        taskArr[i] = "";
-    }else{
-        taskArr[i] = taskArr[i+1];
-    }
+let newArr = []
+
+for(let i=1; i<taskArr.length;i++){
+    newArr[i-1] = taskArr[i];
 }
-taskArr.pop();
+
+
 console.log("Task removed successfully!!");
-console.log(taskArr);
+console.log(newArr);
 
 console.log("Adding 2 high priority tasks at beginning T6 & T7...");
 // Adding high priority task at beginning T6 & T7
